@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Support Bot for Shopify Stores – 40% Fewer Tickets in 30 Days | Lumin Agency</title>
+  <meta name="description" content="Cut Shopify customer-support cost 40% in 30 days with a custom AI bot. Free 15-min audit. No code. ROI guarantee." />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='120' height='120'><circle cx='60' cy='60' r='40' fill='purple' filter='url(#glow)'/></svg>">
+  <!-- Meta Pixel, Google Tag (replace with your IDs) -->
+  <!-- ... -->
+  <style>
+    body { font-family: Inter, Arial, sans-serif; margin: 0; background: linear-gradient(135deg, #ece9fc 0%, #dbd8e3 100%); color: #181A1B;}
+    /* Add further CSS for layout, sticky link, buttons, responsive etc. */
+  </style>
+</head>
+<body>
+  <main>
+    <!-- HERO SECTION -->
+    <section style="padding:48px 0 32px 0; text-align:center;">
+      <h1 style="font-size:2.75rem; margin-bottom:8px;">We cut Shopify support tickets 40% in 30 days—without new hires.</h1>
+      <p style="font-size:1.25rem; color:#888; margin-bottom:32px;">
+        Merchants using our AI bot save 11 hr/week and $1,240/month on support cost.<br>Book a free 15-min audit to see how many tickets we can kill for you.
+      </p>
+      <a href="#audit-cal" style="background: #6C47FF; color: #fff; text-decoration: none; font-weight: bold; border-radius: 8px; padding: 18px 36px; box-shadow: 0 6px 18px #dadada; font-size:1.2rem;">
+        Get Free AI Audit (15 min)
+      </a>
+      <p class="mt-3 text-sm" style="color:#777; margin-top:16px;">“Saved 11 h/week on WISMO tickets” — Sarah, <a href="#">feelgoodstore.myshopify.com</a></p>
+      <!-- Trusted by / Social proof row (optional)—if you want: -->
+      <!-- <div style="margin-top:18px; color:#6050ae; font-size:1rem;">
+        Trusted by 27+ Shopify stores |
+        🚀 Avg 42% ticket reduction in 14 days |
+        ⭐ 5-star rating on Shopify App Store*
+      </div> -->
+    </section>
+
+    <!-- EMBEDDED CALENDAR -->
+    <section id="audit-cal" style="max-width:530px; margin:40px auto 0 auto;">
+      <h2 style="font-size:2rem;">Book Your Free 15-Minute AI Audit</h2>
+      <!-- Optionally add headshot and personal touch: -->
+      <!-- <div style="display:flex;align-items:center;gap:12px;justify-content:center;">
+        <img src="your-photo.jpg" width="48" height="48" style="border-radius:50%" alt="Tyler's photo" />
+        <span>I'll personally audit your support flow and build your savings estimate.</span>
+      </div> -->
+      <div style="margin:28px 0; border:1px solid #e3e4ec; border-radius:7px; box-shadow:0 2px 18px #eee;">
+        <iframe src="https://cal.com/yourlink" width="100%" height="650" style="border:0; border-radius:7px;"></iframe>
+      </div>
+      <div style="text-align:right;">
+        <a href="https://cal.com/yourlink" target="_blank" style="color:#6C47FF;text-decoration:underline;position:sticky;bottom:0;">Can’t see calendar? Click here</a>
+      </div>
+    </section>
+
+    <!-- ROI CALCULATOR -->
+    <section id="roi-calc" style="background:#f7f5ff; padding:48px 0;">
+      <div style="max-width:440px; margin:0 auto; background:#fff; border-radius:10px; box-shadow:0 10px 28px #f1f3ff; padding:32px;">
+        <h3 style="margin-bottom:18px;">ROI Calculator</h3>
+        <form id="calc-form">
+          <label>How many support tickets do you get per month?<br>
+            <input type="number" id="ticket-volume" placeholder="1,200" value="1200" required style="width:100%;padding:6px;margin-top:4px;">
+          </label><br>
+          <label>How many agent hours does it take to close them?<br>
+            <input type="number" step="0.01" id="hours-per-ticket" placeholder="0.75" value="0.75" required style="width:100%;padding:6px;margin-top:4px;">
+          </label><br>
+          <label>Average hourly wage of support staff?<br>
+            <input type="number" id="hourly-wage" placeholder="22" value="22" required style="width:100%;padding:6px;margin-top:4px;">
+          </label><br>
+          <button type="button" onclick="calculateSavings()" style="margin-top:18px;background:#6C47FF;color:#fff;font-weight:bold;padding:18px 36px;border-radius:6px;border:none;font-size:1rem;">
+            Calculate
+          </button>
+        </form>
+        <div id="calc-result" style="margin-top:16px;font-size:1.2rem;font-weight:bolder;"></div>
+        <div id="cta-dynamic"></div>
+      </div>
+    </section>
+
+    <!-- RISK-REVERSAL GUARANTEE STRIP -->
+    <section style="background:#efeafd;border-top:1px solid #DAC7FF;padding:18px 0;text-align:center;">
+      <span style="font-weight:bold;">No-code install.</span>
+      &nbsp;|&nbsp; 30-day ‘remove it or we refund’ guarantee.
+      &nbsp;|&nbsp; Keeps working even if you uninstall apps.
+    </section>
+
+  </main>
+  <!-- Minimal footer if needed -->
+  <!-- <footer style="padding:16px;text-align:center;color:#454545;background:#f4f4fa;">
+    &copy; 2025 Lumin Agency. All rights reserved.
+  </footer> -->
+  <script>
+    function calculateSavings() {
+      const tickets = parseInt(document.getElementById('ticket-volume').value);
+      const hours = parseFloat(document.getElementById('hours-per-ticket').value);
+      const wage = parseFloat(document.getElementById('hourly-wage').value);
+      if (!tickets || !hours || !wage) { return; }
+      const monthlyCost = tickets * hours * wage;
+      const savedAmount = Math.round((monthlyCost * 0.4)/50)*50; // rounded to nearest $50
+      document.getElementById('calc-result').innerHTML =
+        `You’re burning $${monthlyCost.toLocaleString()} every month on repetitive support.<br>
+         Our bot reduces this by 40% = <b>$${savedAmount.toLocaleString()} saved monthly.</b>`;
+      document.getElementById('cta-dynamic').innerHTML =
+        `<a href="#audit-cal" style="margin-top:18px;display:inline-block;background:#23a167;color:#fff;font-weight:bold;padding:15px 28px;border-radius:7px;text-decoration:none;">Lock in $${savedAmount}/mo savings → book audit</a>`;
+    }
+    // Responsive mobile nav fix example:
+    // document.querySelectorAll('.mobile-menu a').forEach(el=>{
+    //   el.addEventListener('click',()=>document.getElementById('mobileMenu').classList.add('hidden'));
+    // });
+  </script>
+</body>
+</html>
